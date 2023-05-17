@@ -47,7 +47,7 @@ Future<T?>? showSlideDialog<T>({
             child: child,
             pillColor: pillColor ?? Colors.blueGrey,
             backgroundColor: backgroundColor ?? Theme.of(context).canvasColor,
-            slideMainAxisSize,
+            slideMainAxisSize: slideMainAxisSize,
           ),
         ),
       );
