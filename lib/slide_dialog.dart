@@ -41,7 +41,7 @@ class _SlideDialogState extends State<SlideDialog> {
         context: context,
         child: Center(
           child: Align(
-            alignment: widget.slideMainAxisSize == MainAxisSize.max ? Alignment.bottomCenter : Alignment.center,
+            alignment: widget.slideMainAxisSize == MainAxisSize.max ? Alignment.center : Alignment.bottomCenter,
             child: Container(
               width: deviceWidth,
               height: widget.slideMainAxisSize == MainAxisSize.max ? deviceHeight / 1.5 : null,
