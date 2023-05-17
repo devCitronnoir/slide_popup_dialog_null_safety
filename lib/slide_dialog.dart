@@ -6,11 +6,13 @@ class SlideDialog extends StatefulWidget {
   final Widget child;
   final Color backgroundColor;
   final Color pillColor;
+  final MainAxisSize slideMainAxisSize;
 
   SlideDialog({
     @required this.child,
     @required this.pillColor,
     @required this.backgroundColor,
+    @required this.slideMainAxisSize,
   });
 
   @override
@@ -47,6 +49,7 @@ class _SlideDialogState extends State<SlideDialog> {
               elevation: 24.0,
               type: MaterialType.card,
               child: Column(
+                mainAxisSize: widget.slideMainAxisSize,
                 children: <Widget>[
                   PillGesture(
                     pillColor: widget.pillColor,
