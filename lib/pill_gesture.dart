@@ -7,10 +7,10 @@ class PillGesture extends StatelessWidget {
   final Color pillColor;
 
   PillGesture({
-    @required this.onVerticalDragStart,
-    @required this.onVerticalDragUpdate,
-    @required this.onVerticalDragEnd,
-    @required this.pillColor,
+    required this.onVerticalDragStart,
+    required this.onVerticalDragUpdate,
+    required this.onVerticalDragEnd,
+    required this.pillColor,
   });
 
   @override
@@ -29,7 +29,7 @@ class PillGesture extends StatelessWidget {
               height: 5.0,
               width: 25.0,
               decoration: BoxDecoration(
-                color: pillColor ?? Colors.blueGrey[200],
+                color: pillColor,
                 borderRadius: BorderRadius.circular(50.0),
               ),
             ),

@@ -1,4 +1,4 @@
-# slide_popup_dialog
+# slide_popup_dialog_null_safety
 
 Popup dialog with slide mechanism. Use it like AlertDialog or SimpleDialog.
 
@@ -6,12 +6,12 @@ Popup dialog with slide mechanism. Use it like AlertDialog or SimpleDialog.
 
 ## How to use
 
-1. Add slide_popup_dialog to your package's pubspec.yaml, then intall it.
+1. Add slide_popup_dialog_null_safety to your package's pubspec.yaml, then intall it.
 
 2. Import package.
 
 ```
-import 'package:slide_popup_dialog/slide_popup_dialog.dart' as slideDialog;
+import 'package:slide_popup_dialog_null_safety/slide_popup_dialog.dart' as slideDialog;
 ```
 
 3. Add this method to your State Widget.
