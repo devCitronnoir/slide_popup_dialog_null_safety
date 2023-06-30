@@ -4,6 +4,7 @@ import './pill_gesture.dart';
 
 class SlideDialog extends StatefulWidget {
   final Widget child;
+  final double? childHeight;
   final Color backgroundColor;
   final Color pillColor;
   final MainAxisSize slideMainAxisSize;
@@ -13,6 +14,7 @@ class SlideDialog extends StatefulWidget {
     required this.pillColor,
     required this.backgroundColor,
     required this.slideMainAxisSize,
+    this.childHeight,
   });
 
   @override
@@ -30,7 +32,7 @@ class _SlideDialogState extends State<SlideDialog> {
 
     return AnimatedPadding(
       padding: MediaQuery.of(context).viewInsets +
-          EdgeInsets.only(top: _currentPosition),
+          EdgeInsets.only(top: deviceHeight - (widget.childHeight ?? (deviceHeight / 2)) + _currentPosition),
       duration: Duration(milliseconds: 100),
       curve: Curves.decelerate,
       child: MediaQuery.removeViewInsets(
@@ -44,7 +46,7 @@ class _SlideDialogState extends State<SlideDialog> {
             alignment: widget.slideMainAxisSize == MainAxisSize.max ? Alignment.center : Alignment.bottomCenter,
             child: Container(
               width: deviceWidth,
-              height: widget.slideMainAxisSize == MainAxisSize.max ? deviceHeight / 1.5 : null,
+              height: widget.slideMainAxisSize == MainAxisSize.max ? deviceHeight : null,
               child: Material(
                 color: widget.backgroundColor,
                 elevation: 24.0,

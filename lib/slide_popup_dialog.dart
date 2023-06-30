@@ -18,6 +18,7 @@ import './slide_dialog.dart';
 Future<T?>? showSlideDialog<T>({
   required BuildContext context,
   required Widget child,
+  double? childHeight,
   Color? barrierColor,
   bool barrierDismissible = true,
   Duration transitionDuration = const Duration(milliseconds: 300),
@@ -27,6 +28,7 @@ Future<T?>? showSlideDialog<T>({
 }) {
   assert(context != null);
   assert(child != null);
+  assert(childHeight != null ? childHeight < MediaQuery.of(context).size.height : true);
 
   return showGeneralDialog(
     context: context,
@@ -45,6 +47,7 @@ Future<T?>? showSlideDialog<T>({
           opacity: animation1.value,
           child: SlideDialog(
             child: child,
+            childHeight: childHeight,
             pillColor: pillColor ?? Colors.blueGrey,
             backgroundColor: backgroundColor ?? Theme.of(context).canvasColor,
             slideMainAxisSize: slideMainAxisSize,

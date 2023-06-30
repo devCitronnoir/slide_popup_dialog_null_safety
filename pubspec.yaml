@@ -1,6 +1,6 @@
 name: slide_popup_dialog_null_safety
 description: Popup dialog with slide mechanism. Use it like AlertDialog or SimpleDialog.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/mahmut/slide_popup_dialog
 repository: https://github.com/mahmut/slide_popup_dialog
 
